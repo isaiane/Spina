@@ -263,18 +263,6 @@ ActiveRecord::Schema.define(version: 2020_06_22_192131) do
     t.datetime "updated_at"
   end
 
-  create_table "spina_users", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.boolean "admin", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "last_logged_in"
-    t.string "password_reset_token"
-    t.datetime "password_reset_sent_at"
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end

@@ -14,8 +14,6 @@ Spina::Engine.routes.draw do
     get "/settings/:plugin", to: "settings#edit", as: :edit_settings
     patch "/settings/:plugin", to: "settings#update", as: :settings
 
-    resources :users
-
     # Sessions
     resources :sessions
     get "login" => "sessions#new"
